@@ -1,0 +1,16 @@
+{
+  "name": "justice-electron-react-app",
+  "version": "1.0.0",
+  "description": "Justice tech project for calculating number of rebar needed for a project",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Mintesnot Yismaw",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^16.0.5"
+  }
+}
