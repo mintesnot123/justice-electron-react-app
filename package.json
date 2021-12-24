@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --config webpack.common.js --watch",
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "Mintesnot Yismaw",
@@ -26,10 +27,33 @@
     "@babel/preset-react": "^7.16.5",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "electron-builder": "^22.10.5",
     "sass": "^1.45.1",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
+  },
+  "build": {
+    "appId": "com.justice-tech.electron-react-app",
+    "productName": "Rebar Calculator",
+    "directories": {
+      "output": "out"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    }
   }
 }
